@@ -1,12 +1,11 @@
 #include <sstream>
 #include <ctime>
 #include "Individual.h"
-#include "BinaryIndividual.h"
 
 
 Individual::Individual(int minAB, int maxAB, int minXY, int maxXY, int minTheta, int maxTheta)
 {
-	individual = std::vector<int>(5);
+	individual = std::vector<Property>(5);
 
 	SetA(IntegerBetween(minAB, maxAB));
 	SetB(IntegerBetween(minAB, maxAB));
@@ -44,23 +43,25 @@ std::vector<int> Individual::IntegerToBinaryVector(int value)
 }
 
 
-BinaryIndividual Individual::ToBinary()
+std::string Individual::ToDecimalString()
 {
-	std::vector<int> binaryVector, binaryResult;
-
-	for (auto value : individual)
-	{
-		binaryVector = IntegerToBinaryVector(value);
-		binaryResult.insert(binaryResult.end(), binaryVector.begin(), binaryVector.end());
-	}
-
-	return BinaryIndividual(binaryResult);
+	std::ostringstream ostringstream;
+	ostringstream	<< "a = " << A().Decimal()
+					<< ", b = " << B().Decimal()
+					<< ", xCoord = " << XCoord().Decimal()
+					<< ", yCoord = " << YCoord().Decimal()
+					<< ", theta = " << Theta().Decimal();
+	return ostringstream.str();
 }
 
 
-std::string Individual::ToString()
+std::string Individual::ToBinaryString()
 {
 	std::ostringstream ostringstream;
-	ostringstream << "a = " << A() << ", b = " << B() << ", xCoord = " << XCoord() << ", yCoord = " << YCoord() << ", theta = " << Theta();
+	ostringstream	<< "a = " << A().BinaryString()
+					<< ", b = " << B().BinaryString()
+					<< ", xCoord = " << XCoord().BinaryString()
+					<< ", yCoord = " << YCoord().BinaryString()
+					<< ", theta = " << Theta().BinaryString();
 	return ostringstream.str();
 }
