@@ -1,13 +1,13 @@
 #include "Individual.h"
 
 
-Individual::Individual()
+Individual::Individual(int minAB, int maxAB, int minXY, int maxXY, int minTheta, int maxTheta)
 {
 	individual = std::vector<int>(5);
-		
-	SetA(IntegerBetween(5, 36));
-	SetB(IntegerBetween(5, 36));
-	SetXCoord(IntegerBetween(19, 82));
-	SetYCoord(IntegerBetween(19, 82));
-	SetTheta(IntegerBetween(0, 127));
+
+	SetA(IntegerBetween(minAB, maxAB));
+	SetB(IntegerBetween(minAB, maxAB));
+	SetXCoord(IntegerBetween(minXY, maxXY));
+	SetYCoord(IntegerBetween(minXY, maxXY));
+	SetTheta(IntegerBetween(minTheta, maxTheta));
 }

@@ -21,7 +21,7 @@ class Individual
 
 public:
 
-	Individual();
+	Individual(int minAB, int maxAB, int minXY, int maxXY, int minTheta, int maxTheta);
 
 	int A() { return individual[0]; }
 
