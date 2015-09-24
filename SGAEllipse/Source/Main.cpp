@@ -24,12 +24,18 @@ void DisplayImage(std::string imagePath)
 }
 
 
+void printIndividual()
+{
+	
+}
+
 int main()
 {
 //	DisplayImage("../SGAEllipse/img/image.jpg");
 
 	Population population = Population(20);
-	std::cout << population.Individual(19).A() << std::endl;
+	for (auto individual : population.Individuals())
+		std::cout << individual.ToString() << std::endl;
 
 	return 0;
 }
