@@ -32,4 +32,6 @@ public:
 	int YCoord() { return individual[3]; }
 
 	int Theta() { return individual[4]; }
+
+	std::string ToString();
 };
