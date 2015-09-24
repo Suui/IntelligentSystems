@@ -24,12 +24,18 @@
     <ClCompile Include="Source\PopulationBuilder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Individual.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Population.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Source\PopulationBuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Individual.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
