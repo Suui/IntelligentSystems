@@ -3,7 +3,6 @@
 #include <opencv2/highgui.hpp>
 #include <iostream>
 #include "Population.h"
-#include "PopulationBuilder.h"
 
 using namespace cv;
 
@@ -27,10 +26,10 @@ void DisplayImage(std::string imagePath)
 
 int main()
 {
-	DisplayImage("../SGAEllipse/img/image.jpg");
+//	DisplayImage("../SGAEllipse/img/image.jpg");
 
-	Population population = PopulationBuilder().Build(10, 100);
-	std::cout << population.GetChromosomes().size() << std::endl;
+	Population population = Population(20);
+	std::cout << population.Individual(19).A() << std::endl;
 
 	return 0;
 }
