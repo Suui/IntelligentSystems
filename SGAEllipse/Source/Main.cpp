@@ -3,6 +3,7 @@
 #include <opencv2/highgui.hpp>
 #include <iostream>
 #include "Population.h"
+#include "BinaryIndividual.h"
 
 using namespace cv;
 
@@ -24,11 +25,6 @@ void DisplayImage(std::string imagePath)
 }
 
 
-void printIndividual()
-{
-	
-}
-
 int main()
 {
 //	DisplayImage("../SGAEllipse/img/image.jpg");
@@ -36,6 +32,12 @@ int main()
 	Population population = Population(20);
 	for (auto individual : population.Individuals())
 		std::cout << individual.ToString() << std::endl;
+
+	BinaryIndividual binaryIndividual = population.Individual(19).ToBinary();
+	std::cout << binaryIndividual.ToString() << std::endl;
+
+	std::cout << 5 / 2 << std::endl;
+
 
 	return 0;
 }

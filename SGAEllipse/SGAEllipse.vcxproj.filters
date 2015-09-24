@@ -24,12 +24,24 @@
     <ClCompile Include="Source\Individual.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\BinaryIndividual.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Property.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Population.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Source\Individual.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\BinaryIndividual.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Property.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

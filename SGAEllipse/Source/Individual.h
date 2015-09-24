@@ -1,9 +1,13 @@
 ﻿#pragma once
 #include <vector>
 
+class BinaryIndividual;
+
+
 class Individual
 {
 	std::vector<int> individual;
+	int bitSizeAB, bitSizeXY, bitSizeTheta;
 
 
 	void SetA(int value) { individual[0] = value; }
@@ -15,8 +19,10 @@ class Individual
 	void SetYCoord(int value) { individual[3] = value; }
 	
 	void SetTheta(int value) { individual[4] = value; }
-	
-	int IntegerBetween(int min, int max) { return rand() % (max - min + 1) + min; }
+
+	int IntegerBetween(int min, int max);
+
+	std::vector<int> IntegerToBinaryVector(int value);
 
 
 public:
@@ -34,4 +40,6 @@ public:
 	int Theta() { return individual[4]; }
 
 	std::string ToString();
+	
+	BinaryIndividual ToBinary();
 };
