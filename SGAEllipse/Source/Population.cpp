@@ -1,9 +1,8 @@
 ﻿#include "Population.h"
 
 
-Population::Population(const std::vector<std::vector<int>>& chromosomes): chromosomes(chromosomes) {}
-
-std::vector<std::vector<int>> Population::GetChromosomes() const
+Population::Population(int numberOfIndividuals, int minAB, int maxAB, int minXY, int maxXY, int minTheta, int maxTheta)
 {
-	return chromosomes;
+	for (int i = 0; i < numberOfIndividuals; i++)
+		individuals.push_back(Individual::Individual(minAB, maxAB, minXY, maxXY, minTheta, maxTheta));
 }

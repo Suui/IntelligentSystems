@@ -84,12 +84,10 @@
     <ClCompile Include="Source\Individual.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Population.cpp" />
-    <ClCompile Include="Source\PopulationBuilder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Individual.h" />
     <ClInclude Include="Source\Population.h" />
-    <ClInclude Include="Source\PopulationBuilder.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

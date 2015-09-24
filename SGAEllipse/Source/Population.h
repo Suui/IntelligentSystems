@@ -1,15 +1,16 @@
 ﻿#pragma once
 #include <vector>
+#include "Individual.h"
 
 
 class Population
 {
-	const std::vector<std::vector<int>> chromosomes;
+	std::vector<Individual> individuals;
 
 
 public:
 
-	explicit Population(const std::vector<std::vector<int>>& chromosomes);
+	Population(int numberOfIndividuals, int minAB = 5, int maxAB = 36, int minXY = 19, int maxXY = 82, int minTheta = 0, int maxTheta = 127);
 
-	std::vector<std::vector<int>> GetChromosomes() const;
+	Individual Individual(int index) { return individuals[index]; }
 };
