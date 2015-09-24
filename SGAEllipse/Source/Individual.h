@@ -6,16 +6,16 @@ class Individual
 	std::vector<int> individual;
 
 
-	int SetA(int value) { individual[0] = value; }
-
-	int SetB(int value) { individual[1] = value; }
-
-	int SetXCoord(int value) { individual[2] = value; }
-
-	int SetYCoord(int value) { individual[3] = value; }
-
-	int SetTheta(int value) { individual[4] = value; }
-
+	void SetA(int value) { individual[0] = value; }
+	
+	void SetB(int value) { individual[1] = value; }
+	
+	void SetXCoord(int value) { individual[2] = value; }
+	
+	void SetYCoord(int value) { individual[3] = value; }
+	
+	void SetTheta(int value) { individual[4] = value; }
+	
 	int IntegerBetween(int min, int max) { return rand() % (max - min + 1) + min; }
 
 
