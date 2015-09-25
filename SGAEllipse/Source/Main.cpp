@@ -11,10 +11,14 @@ int main()
 	Image image = Image("img/ellipses.jpg", 128);	
 
 	Population population = Population(20);
+
+	population.OrderByFitnessIn(image);
+
 	for (auto individual : population.Individuals())
 	{
-		std::cout << individual.ToDecimalString() << std::endl;	
+		std::cout << individual.ToDecimalString() << std::endl;
 		std::cout << individual.ToBinaryString() << std::endl;
+		std::cout << individual.FitnessValue() << std::endl;
 	}
 
 	return 0;

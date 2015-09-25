@@ -1,5 +1,4 @@
 ﻿#pragma once
-#include <vector>
 #include "Property.h"
 
 class BinaryIndividual;
@@ -8,6 +7,7 @@ class BinaryIndividual;
 class Individual
 {
 	std::vector<Property> individual;
+	int fitnessValue;
 	int bitSizeAB, bitSizeXY, bitSizeTheta;
 
 
@@ -39,6 +39,10 @@ public:
 	Property YCoord() { return individual[3]; }
 
 	Property Theta() { return individual[4]; }
+
+	int FitnessValue() { return fitnessValue; }
+
+	void SetFitnessValue(int value) { fitnessValue = value; }
 
 	std::string ToDecimalString();
 

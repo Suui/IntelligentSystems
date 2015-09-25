@@ -13,6 +13,8 @@ Individual::Individual(int minAB, int maxAB, int minXY, int maxXY, int minTheta,
 	SetYCoord(IntegerBetween(minXY, maxXY));
 	SetTheta(IntegerBetween(minTheta, maxTheta));
 
+	fitnessValue = 0;
+
 	bitSizeAB = maxAB - minAB + 1;
 	bitSizeXY = maxXY - minXY + 1;
 	bitSizeTheta = maxTheta - minTheta + 1;
