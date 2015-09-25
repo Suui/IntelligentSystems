@@ -81,17 +81,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Image.cpp" />
-    <ClCompile Include="Source\Individual.cpp" />
+    <ClCompile Include="Source\Image\Image.cpp" />
+    <ClCompile Include="Source\Population\Individual.cpp" />
     <ClCompile Include="Source\Main.cpp" />
-    <ClCompile Include="Source\Population.cpp" />
-    <ClCompile Include="Source\Property.cpp" />
+    <ClCompile Include="Source\Population\Population.cpp" />
+    <ClCompile Include="Source\Population\Property.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Image.h" />
-    <ClInclude Include="Source\Individual.h" />
-    <ClInclude Include="Source\Population.h" />
-    <ClInclude Include="Source\Property.h" />
+    <ClInclude Include="Source\Image\Image.h" />
+    <ClInclude Include="Source\Population\Individual.h" />
+    <ClInclude Include="Source\Population\Population.h" />
+    <ClInclude Include="Source\Population\Property.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

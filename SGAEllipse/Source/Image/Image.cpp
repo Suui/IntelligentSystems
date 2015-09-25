@@ -1,7 +1,7 @@
-﻿#include "Image.h"
-#include <opencv2/imgcodecs.hpp>
-#include <iostream>
+﻿#include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
+#include <iostream>
+#include "Image.h"
 
 
 Image::Image(std::string imagePath)

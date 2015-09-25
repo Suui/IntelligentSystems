@@ -2,8 +2,8 @@
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
 #include <iostream>
-#include "Population.h"
-#include "Image.h"
+#include "Population/Population.h"
+#include "Image/Image.h"
 
 using namespace cv;
 

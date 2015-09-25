@@ -18,30 +18,30 @@
     <ClCompile Include="Source\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Population.cpp">
+    <ClCompile Include="Source\Image\Image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Individual.cpp">
+    <ClCompile Include="Source\Population\Individual.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Property.cpp">
+    <ClCompile Include="Source\Population\Population.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Image.cpp">
+    <ClCompile Include="Source\Population\Property.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Population.h">
+    <ClInclude Include="Source\Image\Image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Individual.h">
+    <ClInclude Include="Source\Population\Individual.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Property.h">
+    <ClInclude Include="Source\Population\Population.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Image.h">
+    <ClInclude Include="Source\Population\Property.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
