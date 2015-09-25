@@ -81,12 +81,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Image.cpp" />
     <ClCompile Include="Source\Individual.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Population.cpp" />
     <ClCompile Include="Source\Property.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Image.h" />
     <ClInclude Include="Source\Individual.h" />
     <ClInclude Include="Source\Population.h" />
     <ClInclude Include="Source\Property.h" />
