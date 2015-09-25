@@ -13,13 +13,11 @@ int main()
 	Population population = Population(40);
 
 	population.OrderByFitnessIn(image);
-	image.Display();
 
 	for (auto individual : population.Individuals())
 	{
 		std::cout << individual.ToDecimalString() << std::endl;
 		std::cout << individual.ToBinaryString() << std::endl;
-		std::cout << individual.FitnessValue() << std::endl;
 	}
 
 	return 0;

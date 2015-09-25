@@ -52,7 +52,8 @@ std::string Individual::ToDecimalString()
 					<< ", b = " << B().Decimal()
 					<< ", xCoord = " << XCoord().Decimal()
 					<< ", yCoord = " << YCoord().Decimal()
-					<< ", theta = " << Theta().Decimal();
+					<< ", theta = " << Theta().Decimal()
+					<< ", fitness = " << FitnessValue();
 	return ostringstream.str();
 }
 
