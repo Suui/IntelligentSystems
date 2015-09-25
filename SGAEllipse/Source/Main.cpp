@@ -8,8 +8,7 @@ using namespace cv;
 
 int main()
 {
-	Image image = Image("img/ellipses.jpg", 128);
-	image.Display();
+	Image image = Image("img/ellipses.jpg", 128);	
 
 	Population population = Population(20);
 	for (auto individual : population.Individuals())

@@ -2,7 +2,7 @@
 #include <opencv2/highgui.hpp>
 #include <iostream>
 #include "Image.h"
-
+#include <string>
 
 Image::Image(std::string imagePath, int threshold)
 {
@@ -22,6 +22,12 @@ bool Image::IsImageLoaded()
 	}
 
 	return true;
+}
+
+
+int Image::GetPixelAt(int x, int y)
+{
+	return image.at<uchar>(x, y);
 }
 
 

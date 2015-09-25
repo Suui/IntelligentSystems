@@ -16,4 +16,8 @@ public:
 	explicit Image(std::string imagePath, int threshold);
 
 	void Display();
+
+	int GetPixelAt(int x, int y);
+
+	Mat Get() { return image; }
 };
