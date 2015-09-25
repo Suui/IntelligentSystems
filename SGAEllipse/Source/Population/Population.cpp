@@ -24,3 +24,10 @@ void Population::OrderByFitnessIn(Image image)
 			  individuals.end(), 
 			  [](Individual first, Individual second) { return first.FitnessValue() > second.FitnessValue(); });
 }
+
+
+void Population::SetToNextGeneration()
+{
+	individuals.erase(individuals.begin() + 20, individuals.end());
+
+}

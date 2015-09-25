@@ -23,4 +23,6 @@ public:
 	int Size() { return individuals.size(); }
 
 	void OrderByFitnessIn(Image image);
+	
+	void SetToNextGeneration();
 };

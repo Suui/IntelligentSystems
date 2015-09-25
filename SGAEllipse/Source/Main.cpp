@@ -13,6 +13,7 @@ int main()
 	Population population = Population(40);
 
 	population.OrderByFitnessIn(image);
+	population.SetToNextGeneration();
 
 	for (auto individual : population.Individuals())
 	{
