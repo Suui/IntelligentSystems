@@ -10,9 +10,10 @@ int main()
 {
 	Image image = Image("img/ellipses.jpg", 128);	
 
-	Population population = Population(20);
+	Population population = Population(40);
 
 	population.OrderByFitnessIn(image);
+	image.Display();
 
 	for (auto individual : population.Individuals())
 	{

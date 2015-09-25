@@ -20,4 +20,7 @@ void Population::OrderByFitnessIn(Image image)
 	for (Individual& individual : individuals)
 		SetFitnessValueFor(individual).In(image);
 	
+	std::sort(individuals.begin(),
+			  individuals.end(), 
+			  [](Individual first, Individual second) { return first.FitnessValue() > second.FitnessValue(); });
 }
