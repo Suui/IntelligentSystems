@@ -82,7 +82,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\Image\Image.cpp" />
-    <ClCompile Include="Source\Population\FitnessFunction.cpp" />
+    <ClCompile Include="Source\Fitness\FitnessFunction.cpp" />
     <ClCompile Include="Source\Population\Individual.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Population\Population.cpp" />
@@ -90,7 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Image\Image.h" />
-    <ClInclude Include="Source\Population\FitnessFunction.h" />
+    <ClInclude Include="Source\Fitness\FitnessFunction.h" />
     <ClInclude Include="Source\Population\Individual.h" />
     <ClInclude Include="Source\Population\Population.h" />
     <ClInclude Include="Source\Population\Property.h" />

@@ -1,5 +1,5 @@
 ﻿#include "Population.h"
-#include "FitnessFunction.h"
+#include "../Fitness/FitnessFunction.h"
 
 
 Population::Population(int numberOfIndividuals, int minAB, int maxAB, int minXY, int maxXY, int minTheta, int maxTheta)

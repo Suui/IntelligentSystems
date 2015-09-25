@@ -31,6 +31,12 @@ int Image::GetPixelAt(int x, int y)
 }
 
 
+void Image::SetPixelAt(int x, int y, int value)
+{
+	image.at<uchar>(x, y) = value;
+}
+
+
 void Image::Display()
 {
 	namedWindow("Display window", WINDOW_KEEPRATIO); // Create a window for display.

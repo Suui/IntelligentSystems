@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "Individual.h"
+#include "../Population/Individual.h"
 
 class Image;
 

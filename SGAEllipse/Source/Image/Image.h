@@ -19,5 +19,7 @@ public:
 
 	int GetPixelAt(int x, int y);
 
+	void SetPixelAt(int x, int y, int value);
+
 	Mat Get() { return image; }
 };

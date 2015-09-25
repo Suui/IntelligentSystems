@@ -30,7 +30,7 @@
     <ClCompile Include="Source\Population\Property.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Population\FitnessFunction.cpp">
+    <ClCompile Include="Source\Fitness\FitnessFunction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,7 +47,7 @@
     <ClInclude Include="Source\Population\Property.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Population\FitnessFunction.h">
+    <ClInclude Include="Source\Fitness\FitnessFunction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
