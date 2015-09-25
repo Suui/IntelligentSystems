@@ -34,7 +34,7 @@ void FitnessFunction::In(Image image)
 		y = elipsePoints[i].second;
 		if (x >= 0 &&  x <= 99 && y >= 0 && y <= 99)
 		{
-			image.at<uchar>(x, y) = 0;
+			image.SetPixelAt(x, y, 0);
 			if (image.GetPixelAt(x, y) == 0)
 				fitnessPoints += 1;
 		}
