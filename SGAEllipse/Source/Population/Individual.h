@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "Property.h"
+#include "../Utility.h"
 
 class BinaryIndividual;
 
@@ -11,19 +12,17 @@ class Individual
 	int bitSizeAB, bitSizeXY, bitSizeTheta;
 
 
-	void SetA(int value) { individual[0] = Property(value, IntegerToBinaryVector(value)); }
+	void SetA(int value) { individual[0] = Property(value, Utility::IntegerToBinaryVector(value)); }
 	
-	void SetB(int value) { individual[1] = Property(value, IntegerToBinaryVector(value)); }
+	void SetB(int value) { individual[1] = Property(value, Utility::IntegerToBinaryVector(value)); }
 	
-	void SetXCoord(int value) { individual[2] = Property(value, IntegerToBinaryVector(value)); }
+	void SetXCoord(int value) { individual[2] = Property(value, Utility::IntegerToBinaryVector(value)); }
 	
-	void SetYCoord(int value) { individual[3] = Property(value, IntegerToBinaryVector(value)); }
+	void SetYCoord(int value) { individual[3] = Property(value, Utility::IntegerToBinaryVector(value)); }
 	
-	void SetTheta(int value) { individual[4] = Property(value, IntegerToBinaryVector(value)); }
+	void SetTheta(int value) { individual[4] = Property(value, Utility::IntegerToBinaryVector(value)); }
 
 	int IntegerBetween(int min, int max);
-
-	std::vector<int> IntegerToBinaryVector(int value);
 
 
 public:
@@ -41,6 +40,12 @@ public:
 	Property Theta() { return individual[4]; }
 
 	int FitnessValue() { return fitnessValue; }
+
+	int BitsizeAB() { return bitSizeAB; }
+	
+	int BitsizeXY() { return bitSizeXY; }
+
+	int BitsizeTheta() { return bitSizeTheta; }
 
 	void SetFitnessValue(int value) { fitnessValue = value; }
 

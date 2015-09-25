@@ -14,10 +14,6 @@ Individual::Individual(int minAB, int maxAB, int minXY, int maxXY, int minTheta,
 	SetTheta(IntegerBetween(minTheta, maxTheta));
 
 	fitnessValue = 0;
-
-	bitSizeAB = maxAB - minAB + 1;
-	bitSizeXY = maxXY - minXY + 1;
-	bitSizeTheta = maxTheta - minTheta + 1;
 }
 
 
@@ -25,23 +21,6 @@ int Individual::IntegerBetween(int min, int max)
 {
 	srand(static_cast<unsigned int>(rand() ^ time(nullptr)));
 	return rand() % (max - min + 1) + min;
-}
-
-
-std::vector<int> Individual::IntegerToBinaryVector(int value)
-{
-	std::vector<int> binaryResult;
-
-	while (value / 2 != 0)
-	{
-		binaryResult.push_back(value % 2);
-		value /= 2;
-	}
-
-	binaryResult.push_back(value % 2);
-	reverse(binaryResult.begin(), binaryResult.end());
-
-	return binaryResult;
 }
 
 

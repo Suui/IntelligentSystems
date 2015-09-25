@@ -87,6 +87,7 @@
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Population\Population.cpp" />
     <ClCompile Include="Source\Population\Property.cpp" />
+    <ClCompile Include="Source\Utility.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Image\Image.h" />
@@ -94,6 +95,7 @@
     <ClInclude Include="Source\Population\Individual.h" />
     <ClInclude Include="Source\Population\Population.h" />
     <ClInclude Include="Source\Population\Property.h" />
+    <ClInclude Include="Source\Utility.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

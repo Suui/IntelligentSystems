@@ -6,6 +6,10 @@ Population::Population(int numberOfIndividuals, int minAB, int maxAB, int minXY,
 {
 	for (int i = 0; i < numberOfIndividuals; i++)
 		individuals.push_back(Individual(minAB, maxAB, minXY, maxXY, minTheta, maxTheta));
+
+	bitSizeAB = maxAB - minAB + 1;
+	bitSizeXY = maxXY - minXY + 1;
+	bitSizeTheta = maxTheta - minTheta + 1;
 }
 
 
@@ -28,6 +32,13 @@ void Population::OrderByFitnessIn(Image image)
 
 void Population::SetToNextGeneration()
 {
-	individuals.erase(individuals.begin() + 20, individuals.end());
+	std::vector<Individual> nextGeneration(individuals.begin(), individuals.begin() + 2);
+	
+	individuals.erase(individuals.begin() + 18, individuals.end());
+
+	for (int i = 0; i < Size() - 1; i += 2)
+	{
+		
+	}
 
 }
