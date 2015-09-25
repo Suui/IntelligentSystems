@@ -4,12 +4,12 @@
 #include "Image.h"
 
 
-Image::Image(std::string imagePath)
+Image::Image(std::string imagePath, int threshold)
 {
 	image = imread(imagePath, IMREAD_GRAYSCALE);
 	if (!IsImageLoaded()) return;
 	
-
+	image = image > threshold;
 }
 
 

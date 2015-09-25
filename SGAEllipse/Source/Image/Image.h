@@ -13,7 +13,7 @@ class Image
 
 public:
 
-	explicit Image(std::string imagePath);
+	explicit Image(std::string imagePath, int threshold);
 
 	void Display();
 };

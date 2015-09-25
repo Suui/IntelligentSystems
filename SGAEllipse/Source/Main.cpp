@@ -1,6 +1,4 @@
 #include <opencv2/core.hpp>
-#include <opencv2/imgcodecs.hpp>
-#include <opencv2/highgui.hpp>
 #include <iostream>
 #include "Population/Population.h"
 #include "Image/Image.h"
@@ -10,7 +8,7 @@ using namespace cv;
 
 int main()
 {
-	Image image = Image("../SGAEllipse/img/test.jpg");
+	Image image = Image("img/ellipses.jpg", 128);
 	image.Display();
 
 	Population population = Population(20);
