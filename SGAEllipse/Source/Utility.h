@@ -7,5 +7,7 @@ class Utility
 
 public:
 
-	static std::vector<int>& IntegerToBinaryVector(int value);
+	static std::vector<int> RandomBinaryVectorGiven(int bits);
+
+	static int BinaryVectorToDecimal(std::vector<int> binaryVector);
 };

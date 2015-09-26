@@ -1,26 +1,20 @@
 #include <sstream>
-#include <ctime>
 #include "Individual.h"
 
 
-Individual::Individual(int minAB, int maxAB, int minXY, int maxXY, int minTheta, int maxTheta)
+Individual::Individual()
+{
+}
+
+Individual::Individual(int bitsAB, int bitsXY, int bitsTheta)
 {
 	individual = std::vector<Property>(5);
 
-	SetA(IntegerBetween(minAB, maxAB));
-	SetB(IntegerBetween(minAB, maxAB));
-	SetXCoord(IntegerBetween(minXY, maxXY));
-	SetYCoord(IntegerBetween(minXY, maxXY));
-	SetTheta(IntegerBetween(minTheta, maxTheta));
-
-	fitnessValue = 0;
-}
-
-
-int Individual::IntegerBetween(int min, int max)
-{
-	srand(static_cast<unsigned int>(rand() ^ time(nullptr)));
-	return rand() % (max - min + 1) + min;
+	SetA(Utility::RandomBinaryVectorGiven(bitsAB));
+	SetB(Utility::RandomBinaryVectorGiven(bitsAB));
+	SetXCoord(Utility::RandomBinaryVectorGiven(bitsXY));
+	SetYCoord(Utility::RandomBinaryVectorGiven(bitsXY));
+	SetTheta(Utility::RandomBinaryVectorGiven(bitsTheta));
 }
 
 

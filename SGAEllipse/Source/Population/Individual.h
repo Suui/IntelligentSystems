@@ -12,22 +12,22 @@ class Individual
 	int bitSizeAB, bitSizeXY, bitSizeTheta;
 
 
-	void SetA(int value) { individual[0] = Property(value, Utility::IntegerToBinaryVector(value)); }
+	void SetA(std::vector<int> binaryVector) { individual[0] = Property(Utility::BinaryVectorToDecimal(binaryVector), binaryVector); }
 	
-	void SetB(int value) { individual[1] = Property(value, Utility::IntegerToBinaryVector(value)); }
+	void SetB(std::vector<int> binaryVector) { individual[1] = Property(Utility::BinaryVectorToDecimal(binaryVector), binaryVector); }
 	
-	void SetXCoord(int value) { individual[2] = Property(value, Utility::IntegerToBinaryVector(value)); }
+	void SetXCoord(std::vector<int> binaryVector) { individual[2] = Property(Utility::BinaryVectorToDecimal(binaryVector), binaryVector); }
 	
-	void SetYCoord(int value) { individual[3] = Property(value, Utility::IntegerToBinaryVector(value)); }
+	void SetYCoord(std::vector<int> binaryVector) { individual[3] = Property(Utility::BinaryVectorToDecimal(binaryVector), binaryVector); }
 	
-	void SetTheta(int value) { individual[4] = Property(value, Utility::IntegerToBinaryVector(value)); }
-
-	int IntegerBetween(int min, int max);
+	void SetTheta(std::vector<int> binaryVector) { individual[4] = Property(Utility::BinaryVectorToDecimal(binaryVector), binaryVector); }
 
 
 public:
 
-	Individual(int minAB, int maxAB, int minXY, int maxXY, int minTheta, int maxTheta);
+	Individual();
+
+	Individual(int bitsAB, int bitsXY, int bitsTheta);
 
 	Property A() { return individual[0]; }
 

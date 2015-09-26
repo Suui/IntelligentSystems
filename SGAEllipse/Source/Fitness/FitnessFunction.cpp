@@ -10,12 +10,12 @@ FitnessFunction::FitnessFunction(Individual& individual) : individual(individual
 
 void FitnessFunction::In(Image image)
 {
-	int a =			individual.A().Decimal();
-	int b =			individual.B().Decimal();
-	int x0 =		individual.XCoord().Decimal();
-	int y0 =		individual.YCoord().Decimal();
+	int a =			individual.A().Decimal() + 5;
+	int b =			individual.B().Decimal() + 5;
+	int x0 =		individual.XCoord().Decimal() + 19;
+	int y0 =		individual.YCoord().Decimal() + 19;
 	double theta = individual.Theta().Decimal();
-	theta = (theta * 179.0 / 127.0) * M_PI / 180;
+	theta = theta * 179.0 / 127.0 * M_PI / 180;
 
 	int x, y;
 	std::vector<std::pair<int, int>> elipsePoints;
