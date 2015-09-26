@@ -1,12 +1,15 @@
 ﻿#include "Population.h"
 #include "../Fitness/FitnessFunction.h"
 #include "Reproduction.h"
+#include <iostream>
 
 
 Population::Population(int numberOfIndividuals, int bitsAB, int bitsXY, int bitsTheta)
 {
 	for (int i = 0; i < numberOfIndividuals; i++)
 		individuals.push_back(Individual(bitsAB, bitsXY, bitsTheta));
+
+	startingSize = numberOfIndividuals;
 }
 
 
@@ -29,8 +32,6 @@ void Population::OrderByFitnessIn(Image image)
 
 void Population::SetToNextGeneration()
 {
-	individuals.erase(individuals.begin() + 19, individuals.end());
-	
 	std::vector<Individual> nextGeneration(individuals.begin(), individuals.begin() + 2);
 
 	std::vector<Individual> eliteSons = Reproduction::Reproduce(individuals[0], individuals[1]);
@@ -38,9 +39,15 @@ void Population::SetToNextGeneration()
 
 
 	std::vector<Individual> sons(2);
-	for (int i = 0; i < Size() - 1; i += 2)
+	for (int i = 2, size = startingSize / 4 + 1; i < size; i += 1)
 	{
+		sons = Reproduction::Reproduce(individuals[0], individuals[i]);
+		nextGeneration.insert(nextGeneration.end(), sons.begin(), sons.end());
 
+		sons = Reproduction::Reproduce(individuals[1], individuals[i]);
+		nextGeneration.insert(nextGeneration.end(), sons.begin(), sons.end());
 	}
 
+	individuals = nextGeneration;
+	std::cout << individuals.size() << std::endl;
 }

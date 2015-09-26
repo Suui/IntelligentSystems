@@ -8,13 +8,25 @@ Individual::Individual()
 
 Individual::Individual(int bitsAB, int bitsXY, int bitsTheta)
 {
-	individual = std::vector<Property>(5);
+	properties = std::vector<Property>(5);
 
 	SetA(Utility::RandomBinaryVectorGiven(bitsAB));
 	SetB(Utility::RandomBinaryVectorGiven(bitsAB));
 	SetXCoord(Utility::RandomBinaryVectorGiven(bitsXY));
 	SetYCoord(Utility::RandomBinaryVectorGiven(bitsXY));
 	SetTheta(Utility::RandomBinaryVectorGiven(bitsTheta));
+}
+
+
+Individual::Individual(std::vector<int> a, std::vector<int> b, std::vector<int> xCoord, std::vector<int> yCoord, std::vector<int> theta)
+{
+	properties = std::vector<Property>(5);
+
+	SetA(a);
+	SetB(b);
+	SetXCoord(xCoord);
+	SetYCoord(yCoord);
+	SetTheta(theta);
 }
 
 

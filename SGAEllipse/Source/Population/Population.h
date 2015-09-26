@@ -8,6 +8,7 @@ class FitnessFunction;
 class Population
 {
 	std::vector<Individual> individuals;
+	int startingSize;
 
 	FitnessFunction SetFitnessValueFor(Individual& Individual);
 

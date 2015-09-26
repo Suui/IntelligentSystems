@@ -12,13 +12,11 @@ int main()
 
 	Population population = Population(40);
 
-	population.OrderByFitnessIn(image);
-	population.SetToNextGeneration();
-
-	for (auto individual : population.Individuals())
+	for (int i = 0; i < 20; i++)
 	{
-		std::cout << individual.ToDecimalString() << std::endl;
-		std::cout << individual.ToBinaryString() << std::endl;
+		std::cout << "Generation " << i << " best fitness = " << population.GetIndividual(0).FitnessValue() << std::endl;
+		population.OrderByFitnessIn(image);
+		population.SetToNextGeneration();
 	}
 
 	return 0;
