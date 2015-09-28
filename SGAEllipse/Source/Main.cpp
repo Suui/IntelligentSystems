@@ -15,10 +15,13 @@ int main()
 	{
 		std::cout << "Generation " << i << " best fitness = " << population.GetIndividual(0).FitnessValue() << std::endl;
 		population.OrderByFitnessIn(image);
+
+		for (auto individual : population.Individuals())
+			std::cout << individual.ToDecimalString() << std::endl;
+
+		population.DisplayBestEllipseFoundIn(Image("img/ellipses.jpg"));
 		population.SetToNextGeneration();
 	}
-
-	population.DisplayBestEllipseFoundIn(Image("img/ellipses.jpg"));
 
 	return 0;
 }
