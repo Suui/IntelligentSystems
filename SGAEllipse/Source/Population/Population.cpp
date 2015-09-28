@@ -36,7 +36,6 @@ void Population::SetToNextGeneration()
 	std::vector<Individual> eliteSons = Reproduction::Reproduce(individuals[0], individuals[1]);
 	nextGeneration.insert(nextGeneration.end(), eliteSons.begin(), eliteSons.end());
 
-
 	std::vector<Individual> sons(2);
 	for (int i = 2, size = startingSize / 4 + 1; i < size; i += 1)
 	{

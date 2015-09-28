@@ -9,10 +9,7 @@ Property::Property()
 }
 
 
-Property::Property(int decimalValue, const std::vector<int>& binaryValue): decimalValue(decimalValue), binaryValue(binaryValue)
-{
-
-}
+Property::Property(int decimalValue, const std::vector<int>& binaryValue) : decimalValue(decimalValue), binaryValue(binaryValue) {}
 
 
 std::string Property::BinaryString() const
