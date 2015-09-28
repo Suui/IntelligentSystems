@@ -1,9 +1,6 @@
-#include <opencv2/core.hpp>
-#include <iostream>
 #include "Population/Population.h"
 #include "Image/Image.h"
-
-using namespace cv;
+#include <iostream>
 
 
 int main()
