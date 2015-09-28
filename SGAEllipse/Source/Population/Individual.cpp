@@ -11,6 +11,7 @@ Individual::Individual()
 Individual::Individual(int bitsAB, int bitsXY, int bitsTheta)
 {
 	properties = std::vector<Property>(5);
+	fitnessValue = 0;
 
 	SetA(Utility::RandomBinaryVectorGiven(bitsAB));
 	SetB(Utility::RandomBinaryVectorGiven(bitsAB));
@@ -23,6 +24,7 @@ Individual::Individual(int bitsAB, int bitsXY, int bitsTheta)
 Individual::Individual(std::vector<int> a, std::vector<int> b, std::vector<int> xCoord, std::vector<int> yCoord, std::vector<int> theta)
 {
 	properties = std::vector<Property>(5);
+	fitnessValue = 0;
 
 	SetA(a);
 	SetB(b);
