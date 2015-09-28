@@ -38,7 +38,7 @@ public:
 
 	Property Theta() { return properties[4]; }
 
-	int FitnessValue() { return fitnessValue; }
+	int FitnessValue() const { return fitnessValue; }
 
 	void SetFitnessValue(int value) { fitnessValue = value; }
 

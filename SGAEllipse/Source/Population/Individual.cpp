@@ -1,10 +1,12 @@
-#include <sstream>
 #include "Individual.h"
+#include <sstream>
 
 
 Individual::Individual()
 {
+	fitnessValue = 0;
 }
+
 
 Individual::Individual(int bitsAB, int bitsXY, int bitsTheta)
 {
