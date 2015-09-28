@@ -7,9 +7,14 @@ class Image
 	cv::Mat image;
 
 	bool IsImageLoaded();
-	
+
 
 public:
+
+	static const cv::Vec3b blueColor;
+
+
+	explicit Image(std::string imagePath);
 
 	explicit Image(std::string imagePath, int threshold);
 
@@ -17,7 +22,7 @@ public:
 
 	int GetPixelAt(int x, int y);
 
-	void SetPixelAt(int x, int y, int value);
+	void SetPixelAt(int x, int y, cv::Vec3b color);
 
 	cv::Mat Get() { return image; }
 };

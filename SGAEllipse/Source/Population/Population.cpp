@@ -18,6 +18,12 @@ FitnessFunction Population::SetFitnessValueFor(Individual& individual)
 }
 
 
+FitnessFunction Population::DisplayEllipseFor(Individual& individual)
+{
+	return FitnessFunction(individual);
+}
+
+
 void Population::OrderByFitnessIn(Image image)
 {
 	for (Individual& individual : individuals)
@@ -49,4 +55,22 @@ void Population::SetToNextGeneration()
 	}
 
 	individuals = nextGeneration;
+}
+
+
+void Population::DisplayBestEllipseFoundIn(Image image)
+{
+	std::vector<std::pair<int, int>> ellipsePoints = Utility::GetEllipsePointsFor(GetIndividual(0));
+
+	int x, y;
+	for (int i = 0, size = ellipsePoints.size(); i < size; i++)
+	{
+		x = ellipsePoints[i].first;
+		y = ellipsePoints[i].second;
+		if (x >= 0 && x <= 99 && y >= 0 && y <= 99)
+			image.SetPixelAt(x, y, Image::blueColor);
+		
+	}
+
+	image.Display();
 }
