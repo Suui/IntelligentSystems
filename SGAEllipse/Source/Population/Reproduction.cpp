@@ -1,4 +1,5 @@
 ﻿#include "Reproduction.h"
+#include "Individual.h"
 
 
 std::vector<int> Reproduction::CrossoverBetween(std::vector<int> firstParent, std::vector<int> secondParent, int crossoverPoint)
