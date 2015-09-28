@@ -1,7 +1,6 @@
 ﻿#include "Population.h"
 #include "../Fitness/FitnessFunction.h"
 #include "Reproduction.h"
-#include <iostream>
 
 
 Population::Population(int numberOfIndividuals, int bitsAB, int bitsXY, int bitsTheta)
@@ -49,5 +48,4 @@ void Population::SetToNextGeneration()
 	}
 
 	individuals = nextGeneration;
-	std::cout << individuals.size() << std::endl;
 }
