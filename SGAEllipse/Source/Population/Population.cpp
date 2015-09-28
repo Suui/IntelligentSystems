@@ -33,16 +33,18 @@ void Population::SetToNextGeneration()
 {
 	std::vector<Individual> nextGeneration(individuals.begin(), individuals.begin() + 2);
 
-	std::vector<Individual> eliteSons = Reproduction::Reproduce(individuals[0], individuals[1]);
+	// Elitist
+	std::vector<Individual> eliteSons = Reproduction::Reproduce(GetIndividual(0), GetIndividual(1));
 	nextGeneration.insert(nextGeneration.end(), eliteSons.begin(), eliteSons.end());
 
+	// Crossover
 	std::vector<Individual> sons(2);
-	for (int i = 2, size = startingSize / 4 + 1; i < size; i += 1)
+	for (unsigned int i = 2, size = startingSize / 4 + 1; i < size; i += 1)
 	{
-		sons = Reproduction::Reproduce(individuals[0], individuals[i]);
+		sons = Reproduction::Reproduce(GetIndividual(0), GetIndividual(i));
 		nextGeneration.insert(nextGeneration.end(), sons.begin(), sons.end());
 
-		sons = Reproduction::Reproduce(individuals[1], individuals[i]);
+		sons = Reproduction::Reproduce(GetIndividual(1), GetIndividual(i));
 		nextGeneration.insert(nextGeneration.end(), sons.begin(), sons.end());
 	}
 
