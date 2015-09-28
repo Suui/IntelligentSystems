@@ -1,7 +1,5 @@
 ﻿#pragma once
-#include <vector>
-
-class Individual;
+#include "Individual.h"
 
 
 class Reproduction
