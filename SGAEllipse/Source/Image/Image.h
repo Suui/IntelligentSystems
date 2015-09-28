@@ -1,12 +1,10 @@
 ﻿#pragma once
 #include <opencv2/core/mat.hpp>
 
-using namespace cv;
-
 
 class Image
 {
-	Mat image;
+	cv::Mat image;
 
 	bool IsImageLoaded();
 	
@@ -21,5 +19,5 @@ public:
 
 	void SetPixelAt(int x, int y, int value);
 
-	Mat Get() { return image; }
+	cv::Mat Get() { return image; }
 };

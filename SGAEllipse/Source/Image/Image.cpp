@@ -1,12 +1,14 @@
 ﻿#include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
-#include <iostream>
+
 #include "Image.h"
+#include <iostream>
 #include <string>
+
 
 Image::Image(std::string imagePath, int threshold)
 {
-	image = imread(imagePath, IMREAD_GRAYSCALE);
+	image = cv::imread(imagePath, cv::IMREAD_GRAYSCALE);
 	if (!IsImageLoaded()) return;
 	
 	image = image > threshold;
@@ -39,7 +41,7 @@ void Image::SetPixelAt(int x, int y, int value)
 
 void Image::Display()
 {
-	namedWindow("Display window", WINDOW_KEEPRATIO); // Create a window for display.
-	imshow("Display window", image); // Show our image inside it.
-	waitKey(0); // Wait for a keystroke in the window
+	cv::namedWindow("Display window", cv::WINDOW_KEEPRATIO); // Create a window for display.
+	cv::imshow("Display window", image); // Show our image inside it.
+	cv::waitKey(0); // Wait for a keystroke in the window
 }
