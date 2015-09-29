@@ -10,19 +10,6 @@ class Individual
 	int fitnessValue;
 
 
-	void SetA(std::vector<int> binaryVector) { properties[0] = Property(Utility::BinaryVectorToDecimal(binaryVector), binaryVector); }
-	
-	void SetB(std::vector<int> binaryVector) { properties[1] = Property(Utility::BinaryVectorToDecimal(binaryVector), binaryVector); }
-	
-	void SetXCoord(std::vector<int> binaryVector) { properties[2] = Property(Utility::BinaryVectorToDecimal(binaryVector), binaryVector); }
-	
-	void SetYCoord(std::vector<int> binaryVector) { properties[3] = Property(Utility::BinaryVectorToDecimal(binaryVector), binaryVector); }
-	
-	void SetTheta(std::vector<int> binaryVector) { properties[4] = Property(Utility::BinaryVectorToDecimal(binaryVector), binaryVector); }
-
-	void SetBinaryVectorFromFields();
-	
-
 public:
 
 	Individual();
