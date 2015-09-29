@@ -64,7 +64,9 @@ Property Individual::YCoord()
 
 Property Individual::Theta()
 {
-	return properties[4];
+	int begin = PopulationStatics::bitsAB * 2 + PopulationStatics::bitsXY * 2;
+	std::vector<int> binary = Utility::SubVector(binaryVector, begin, begin + PopulationStatics::bitsTheta);
+	return Property(Utility::BinaryVectorToDecimal(binary), binary);
 }
 
 
