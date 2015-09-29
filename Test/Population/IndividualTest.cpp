@@ -5,7 +5,7 @@
 
 TEST_CASE("Individual should")
 {
-	GIVEN("a PopulationStatics with 5 bitsAB, 5 bitsXY, 5 bitsTheta")
+	GIVEN("a PopulationStatics with 5 bitsAB, 6 bitsXY, 7 bitsTheta")
 	{
 		PopulationStatics::bitsAB = 5;
 		PopulationStatics::bitsXY = 6;
