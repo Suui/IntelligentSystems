@@ -21,10 +21,10 @@ TEST_CASE("Individual should")
 		THEN("return property A with a binary value of 5 bits")
 			CHECK(individual.A().Binary().size() == 5);
 
-		THEN("should return property B with a binary value of 5 bits")
+		THEN("return property B with a binary value of 5 bits")
 			CHECK(individual.B().Binary().size() == 5);
 
-		THEN("should return property X with a binary value of 6 bits")
+		THEN("return property X with a binary value of 6 bits")
 			CHECK(individual.XCoord().Binary().size() == 6);
 	}
 }
