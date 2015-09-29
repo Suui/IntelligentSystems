@@ -15,4 +15,10 @@ TEST_CASE("Utility should")
 		std::vector<int> result = { 1, 1, 0 };
 		CHECK(Utility::IntegerToBinaryVector(6) == result);
 	}
+
+	SECTION("create a human-readable ordered binary vector of the specified length in bits")
+	{
+		CHECK(Utility::RandomBinaryVectorGiven(5).size() == 5);
+		CHECK(Utility::RandomBinaryVectorGiven(38).size() == 38);
+	}
 }
