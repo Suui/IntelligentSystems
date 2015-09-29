@@ -14,6 +14,9 @@ Individual::Individual(int bitsAB, int bitsXY, int bitsTheta)
 	properties = std::vector<Property>(5);
 	fitnessValue = 0;
 
+	int totalBits = bitsAB * 2 + bitsXY * 2 + bitsTheta;
+	binaryVector = Utility::RandomBinaryVectorGiven(totalBits);
+
 	SetA(Utility::RandomBinaryVectorGiven(bitsAB));
 	SetB(Utility::RandomBinaryVectorGiven(bitsAB));
 	SetXCoord(Utility::RandomBinaryVectorGiven(bitsXY));

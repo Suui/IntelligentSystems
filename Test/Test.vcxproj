@@ -58,7 +58,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>D:\Projects\Programming\Cpp\IntelligentSystems\SGAEllipse\Debug\Utility.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D:\Projects\Programming\Cpp\IntelligentSystems\SGAEllipse\Debug\Utility.obj;D:\Projects\Programming\Cpp\IntelligentSystems\SGAEllipse\Debug\Individual.obj;D:\Projects\Programming\Cpp\IntelligentSystems\SGAEllipse\Debug\PopulationStatics.obj;D:\Projects\Programming\Cpp\IntelligentSystems\SGAEllipse\Debug\Property.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -83,6 +83,7 @@
     <ClInclude Include="TestRunner\catch.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Population\IndividualTest.cpp" />
     <ClCompile Include="TestRunner\TestRunner.cpp" />
     <ClCompile Include="UtilityTest\UtilityTest.cpp" />
   </ItemGroup>
