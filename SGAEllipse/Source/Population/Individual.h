@@ -21,7 +21,7 @@ public:
 
 	inline Property B();
 
-	Property XCoord() { return properties[2]; }
+	Property XCoord();
 
 	Property YCoord() { return properties[3]; }
 

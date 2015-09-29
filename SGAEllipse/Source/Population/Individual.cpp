@@ -38,9 +38,18 @@ inline Property Individual::A()
 }
 
 
-Property Individual::B()
+inline Property Individual::B()
 {
-	std::vector<int> binary = Utility::SubVector(binaryVector, PopulationStatics::bitsAB, PopulationStatics::bitsAB * 2);
+	int begin = PopulationStatics::bitsAB;
+	std::vector<int> binary = Utility::SubVector(binaryVector, begin, begin + PopulationStatics::bitsAB);
+	return Property(Utility::BinaryVectorToDecimal(binary), binary);
+}
+
+
+inline Property Individual::XCoord()
+{
+	int begin = PopulationStatics::bitsAB * 2;
+	std::vector<int> binary = Utility::SubVector(binaryVector, begin, begin + PopulationStatics::bitsXY);
 	return Property(Utility::BinaryVectorToDecimal(binary), binary);
 }
 
