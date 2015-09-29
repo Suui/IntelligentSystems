@@ -19,4 +19,8 @@ public:
 	static void SetRandomSeed();
 	
 	static std::vector<std::pair<int, int>> GetEllipsePointsFor(Individual individual);
+	
+	static std::vector<int> IntegerToBinaryVector(int value);
+
+	static std::vector<int> GetSubVector(std::vector<int> Vector, int begin, int end);
 };

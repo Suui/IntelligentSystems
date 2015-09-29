@@ -10,6 +10,7 @@ class Population
 	std::vector<Individual> individuals;
 	int startingSize;
 
+
 	FitnessFunction SetFitnessValueFor(Individual& individual);
 
 	FitnessFunction DisplayEllipseFor(Individual& individual);

@@ -1,10 +1,15 @@
 ﻿#include "Population.h"
 #include "../Fitness/FitnessFunction.h"
 #include "Reproduction.h"
+#include "PopulationStatics.h"
 
 
 Population::Population(int numberOfIndividuals, int bitsAB, int bitsXY, int bitsTheta)
 {
+	PopulationStatics::bitsAB = bitsAB;
+	PopulationStatics::bitsXY = bitsXY;
+	PopulationStatics::bitsTheta = bitsTheta;
+
 	for (int i = 0; i < numberOfIndividuals; i++)
 		individuals.push_back(Individual(bitsAB, bitsXY, bitsTheta));
 

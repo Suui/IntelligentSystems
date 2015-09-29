@@ -54,7 +54,7 @@ std::vector<std::pair<int, int>> Utility::GetEllipsePointsFor(Individual individ
 	int x0 = individual.XCoord().Decimal() + 19;
 	int y0 = individual.YCoord().Decimal() + 19;
 	double theta = individual.Theta().Decimal();
-	theta = theta * 179.0 / 127.0 * M_PI / 180;
+	theta = theta * 89.9 / 127.0 * M_PI / 180;
 
 	int x, y;
 	std::vector<std::pair<int, int>> elipsePoints;
@@ -67,4 +67,18 @@ std::vector<std::pair<int, int>> Utility::GetEllipsePointsFor(Individual individ
 	}
 
 	return elipsePoints;
+}
+
+
+std::vector<int> Utility::IntegerToBinaryVector(int value)
+{
+	std::vector<int> binaryVector = std::vector<int>();
+
+	while (value / 2 != 0)
+	{
+		binaryVector.push_back(value % 2);
+		value /= 2;
+	}
+
+	return binaryVector;
 }

@@ -6,6 +6,7 @@
 class Individual
 {
 	std::vector<Property> properties;
+	std::vector<int> binaryVector;
 	int fitnessValue;
 
 
@@ -19,6 +20,8 @@ class Individual
 	
 	void SetTheta(std::vector<int> binaryVector) { properties[4] = Property(Utility::BinaryVectorToDecimal(binaryVector), binaryVector); }
 
+	void SetBinaryVectorFromFields();
+	
 
 public:
 
@@ -26,7 +29,7 @@ public:
 
 	Individual(int bitsAB, int bitsXY, int bitsTheta);
 
-	Individual(std::vector<int> a, std::vector<int> b, std::vector<int> xCoord, std::vector<int> yCoord, std::vector<int> theta);
+	Individual(std::vector<int> fullBinaryVector);
 
 	Property A() { return properties[0]; }
 
@@ -38,6 +41,8 @@ public:
 
 	Property Theta() { return properties[4]; }
 
+	std::vector<int> BinaryVector() { return binaryVector; }
+
 	int FitnessValue() const { return fitnessValue; }
 
 	void SetFitnessValue(int value) { fitnessValue = value; }
@@ -47,6 +52,4 @@ public:
 	std::string ToBinaryString();
 
 	std::vector<Property> Properties() { return properties; }
-
-	std::vector<int> GetFullBinaryVector();
 };

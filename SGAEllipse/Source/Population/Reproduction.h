@@ -4,9 +4,10 @@
 
 class Reproduction
 {
-	static std::vector<int> CrossoverBetween(std::vector<int> dadPiece, std::vector<int> momPiece, int crossoverPoint);
+	static std::vector<int> CrossoverBetween(std::vector<int> firstParent, std::vector<int> secondParent, int firstPoint, int secondPoint);
+
 
 public:
-
+	
 	static std::vector<Individual> Reproduce(Individual father, Individual mother);
 };

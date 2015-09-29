@@ -1,5 +1,6 @@
 #include "Individual.h"
 #include <sstream>
+#include "PopulationStatics.h"
 
 
 Individual::Individual()
@@ -18,32 +19,37 @@ Individual::Individual(int bitsAB, int bitsXY, int bitsTheta)
 	SetXCoord(Utility::RandomBinaryVectorGiven(bitsXY));
 	SetYCoord(Utility::RandomBinaryVectorGiven(bitsXY));
 	SetTheta(Utility::RandomBinaryVectorGiven(bitsTheta));
+
+	SetBinaryVectorFromFields();
 }
 
 
-Individual::Individual(std::vector<int> a, std::vector<int> b, std::vector<int> xCoord, std::vector<int> yCoord, std::vector<int> theta)
+Individual::Individual(std::vector<int> fullBinaryVector)
 {
-	properties = std::vector<Property>(5);
-	fitnessValue = 0;
+	binaryVector = fullBinaryVector;
 
-	SetA(a);
-	SetB(b);
-	SetXCoord(xCoord);
-	SetYCoord(yCoord);
-	SetTheta(theta);
+	int bitsAB = PopulationStatics::bitsAB;
+	int bitsXY = PopulationStatics::bitsXY;
+	int bitsTheta = PopulationStatics::bitsTheta;
+	
 }
 
 
-std::vector<int> Individual::GetFullBinaryVector()
+void Individual::SetBinaryVectorFromFields()
 {
-	std::vector<int> fullBinaryIndividual(A().Binary().begin(), A().Binary().end());
+	std::vector<int> a = A().Binary();
+	std::vector<int> b = B().Binary();
+	std::vector<int> x = XCoord().Binary();
+	std::vector<int> y = YCoord().Binary();
+	std::vector<int> t = Theta().Binary();
 
-	fullBinaryIndividual.insert(fullBinaryIndividual.end(), B().Binary().begin(), B().Binary().end());
-	fullBinaryIndividual.insert(fullBinaryIndividual.end(), XCoord().Binary().begin(), XCoord().Binary().end());
-	fullBinaryIndividual.insert(fullBinaryIndividual.end(), YCoord().Binary().begin(), YCoord().Binary().end());
-	fullBinaryIndividual.insert(fullBinaryIndividual.end(), Theta().Binary().begin(), Theta().Binary().end());
+	binaryVector = std::vector<int>();
 
-	return fullBinaryIndividual;
+	binaryVector.insert(binaryVector.end(), a.begin(), a.end());
+	binaryVector.insert(binaryVector.end(), b.begin(), b.end());
+	binaryVector.insert(binaryVector.end(), x.begin(), x.end());
+	binaryVector.insert(binaryVector.end(), y.begin(), y.end());
+	binaryVector.insert(binaryVector.end(), t.begin(), t.end());
 }
 
 
