@@ -7,14 +7,8 @@
 Individual::Individual()
 {
 	fitnessValue = 0;
-}
 
-
-Individual::Individual(int bitsAB, int bitsXY, int bitsTheta)
-{
-	fitnessValue = 0;
-
-	int totalBits = bitsAB * 2 + bitsXY * 2 + bitsTheta;
+	int totalBits = PopulationStatics::bitsAB * 2 + PopulationStatics::bitsXY * 2 + PopulationStatics::bitsTheta;
 	binaryVector = Utility::RandomBinaryVectorGiven(totalBits);
 }
 

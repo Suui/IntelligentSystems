@@ -10,7 +10,7 @@ TEST_CASE("Individual should")
 		PopulationStatics::bitsAB = 5;
 		PopulationStatics::bitsXY = 6;
 		PopulationStatics::bitsTheta = 7;
-		Individual individual = Individual(5, 6, 7);
+		Individual individual = Individual();
 
 		THEN("be initialized with a binary vector of 2 x bitsAB + 2 x bitsXY + bitsTheta number of bits")
 		{

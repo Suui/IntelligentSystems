@@ -12,8 +12,6 @@ public:
 
 	Individual();
 
-	Individual(int bitsAB, int bitsXY, int bitsTheta);
-
 	Individual(std::vector<int> fullBinaryVector);
 
 	std::vector<int> BinaryVector() { return binaryVector; }

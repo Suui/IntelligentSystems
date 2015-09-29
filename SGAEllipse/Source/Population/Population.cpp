@@ -12,7 +12,7 @@ Population::Population(int numberOfIndividuals, int bitsAB, int bitsXY, int bits
 	PopulationStatics::bitsTheta = bitsTheta;
 
 	for (int i = 0; i < numberOfIndividuals; i++)
-		individuals.push_back(Individual(bitsAB, bitsXY, bitsTheta));
+		individuals.push_back(Individual());
 
 	startingSize = numberOfIndividuals;
 }
