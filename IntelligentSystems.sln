@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SGAEllipse", "SGAEllipse\SGAEllipse.vcxproj", "{1BCCB636-3B16-40B6-8F69-8233461EF8F4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcxproj", "{C49125F0-6210-4B33-A7AE-B4B9EA048246}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -15,6 +17,10 @@ Global
 		{1BCCB636-3B16-40B6-8F69-8233461EF8F4}.Debug|Win32.Build.0 = Debug|Win32
 		{1BCCB636-3B16-40B6-8F69-8233461EF8F4}.Release|Win32.ActiveCfg = Release|Win32
 		{1BCCB636-3B16-40B6-8F69-8233461EF8F4}.Release|Win32.Build.0 = Release|Win32
+		{C49125F0-6210-4B33-A7AE-B4B9EA048246}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C49125F0-6210-4B33-A7AE-B4B9EA048246}.Debug|Win32.Build.0 = Debug|Win32
+		{C49125F0-6210-4B33-A7AE-B4B9EA048246}.Release|Win32.ActiveCfg = Release|Win32
+		{C49125F0-6210-4B33-A7AE-B4B9EA048246}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
