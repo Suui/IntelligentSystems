@@ -4,7 +4,6 @@
 
 class Individual
 {
-	std::vector<Property> properties;
 	std::vector<int> binaryVector;
 	int fitnessValue;
 
@@ -36,6 +35,4 @@ public:
 	std::string ToDecimalString();
 
 	std::string ToBinaryString();
-
-	std::vector<Property> Properties() { return properties; }
 };

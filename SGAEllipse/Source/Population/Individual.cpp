@@ -12,7 +12,6 @@ Individual::Individual()
 
 Individual::Individual(int bitsAB, int bitsXY, int bitsTheta)
 {
-	properties = std::vector<Property>(5);
 	fitnessValue = 0;
 
 	int totalBits = bitsAB * 2 + bitsXY * 2 + bitsTheta;
