@@ -1,6 +1,5 @@
 ﻿#pragma once
 #include "Property.h"
-#include "../Utility.h"
 
 
 class Individual
@@ -18,7 +17,7 @@ public:
 
 	Individual(std::vector<int> fullBinaryVector);
 
-	Property A() { return properties[0]; }
+	inline Property A();
 
 	Property B() { return properties[1]; }
 

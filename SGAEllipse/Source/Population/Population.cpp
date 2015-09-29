@@ -2,6 +2,7 @@
 #include "../Fitness/FitnessFunction.h"
 #include "Reproduction.h"
 #include "PopulationStatics.h"
+#include "../Utility.h"
 
 
 Population::Population(int numberOfIndividuals, int bitsAB, int bitsXY, int bitsTheta)

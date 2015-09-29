@@ -1,5 +1,6 @@
 ﻿#include "FitnessFunction.h"
 #include "../Image/Image.h"
+#include "../Utility.h"
 
 
 FitnessFunction::FitnessFunction(Individual& individual) : individual(individual) {}

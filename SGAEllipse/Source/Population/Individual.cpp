@@ -1,6 +1,7 @@
 #include "Individual.h"
-#include <sstream>
 #include "PopulationStatics.h"
+#include <sstream>
+#include "../Utility.h"
 
 
 Individual::Individual()
@@ -27,6 +28,13 @@ Individual::Individual(std::vector<int> fullBinaryVector)
 	int bitsXY = PopulationStatics::bitsXY;
 	int bitsTheta = PopulationStatics::bitsTheta;
 	
+}
+
+
+inline Property Individual::A()
+{
+	std::vector<int> binary = Utility::SubVector(binaryVector, 0, PopulationStatics::bitsAB);
+	return Property(Utility::BinaryVectorToDecimal(binary), binary);
 }
 
 

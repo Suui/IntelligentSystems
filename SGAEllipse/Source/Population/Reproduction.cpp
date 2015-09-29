@@ -1,4 +1,5 @@
 ﻿#include "Reproduction.h"
+#include "../Utility.h"
 
 
 std::vector<int> Reproduction::CrossoverBetween(std::vector<int> firstParent, std::vector<int> secondParent, int firstPoint, int secondPoint)

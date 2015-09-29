@@ -1,5 +1,6 @@
 #include "../TestRunner/catch.hpp"
 #include "../../SGAEllipse/Source/Population/Individual.h"
+#include "../../SGAEllipse/Source/Population/PopulationStatics.h"
 
 
 TEST_CASE("Individual should")
@@ -13,4 +14,19 @@ TEST_CASE("Individual should")
 		CHECK(anotherIndividual.BinaryVector().size() == 7 * 2 + 5 * 2 + 9);
 	}
 
+	SECTION("return properties correctly")
+	{
+		GIVEN("a PopulationStatics with 5 bitsAB, 5 bitsXY, 5 bitsTheta")
+		{
+			PopulationStatics::bitsAB = 5;
+			PopulationStatics::bitsXY = 6;
+			PopulationStatics::bitsTheta = 7;
+			Individual individual = Individual(5, 6, 7);
+
+			THEN("the Individual should return property A with a binary value of 5 bits")
+				CHECK(individual.A().Binary().size() == 5);
+
+
+		}
+	}
 }
