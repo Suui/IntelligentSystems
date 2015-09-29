@@ -17,6 +17,8 @@ public:
 
 	Individual(std::vector<int> fullBinaryVector);
 
+	std::vector<int> BinaryVector() { return binaryVector; }
+
 	inline Property A();
 
 	inline Property B();
@@ -26,8 +28,6 @@ public:
 	inline Property YCoord();
 
 	inline Property Theta();
-
-	std::vector<int> BinaryVector() { return binaryVector; }
 
 	int FitnessValue() const { return fitnessValue; }
 
