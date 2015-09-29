@@ -54,6 +54,20 @@ inline Property Individual::XCoord()
 }
 
 
+Property Individual::YCoord()
+{
+	int begin = PopulationStatics::bitsAB * 2 + PopulationStatics::bitsXY;
+	std::vector<int> binary = Utility::SubVector(binaryVector, begin, begin + PopulationStatics::bitsXY);
+	return Property(Utility::BinaryVectorToDecimal(binary), binary);
+}
+
+
+Property Individual::Theta()
+{
+	return properties[4];
+}
+
+
 std::string Individual::ToDecimalString()
 {
 	std::ostringstream ostringstream;

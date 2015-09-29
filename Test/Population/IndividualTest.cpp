@@ -26,5 +26,9 @@ TEST_CASE("Individual should")
 
 		THEN("return property X with a binary value of 6 bits")
 			CHECK(individual.XCoord().Binary().size() == 6);
+
+		THEN("return property Y with a binary value of 6 bits")
+			CHECK(individual.YCoord().Binary().size() == 6);
+
 	}
 }

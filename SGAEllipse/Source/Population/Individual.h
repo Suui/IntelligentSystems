@@ -21,11 +21,11 @@ public:
 
 	inline Property B();
 
-	Property XCoord();
+	inline Property XCoord();
 
-	Property YCoord() { return properties[3]; }
+	inline Property YCoord();
 
-	Property Theta() { return properties[4]; }
+	inline Property Theta();
 
 	std::vector<int> BinaryVector() { return binaryVector; }
 
