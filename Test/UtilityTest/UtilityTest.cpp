@@ -21,4 +21,14 @@ TEST_CASE("Utility should")
 		CHECK(Utility::RandomBinaryVectorGiven(5).size() == 5);
 		CHECK(Utility::RandomBinaryVectorGiven(38).size() == 38);
 	}
+
+	SECTION("return a subvector given a vector and two points to cut")
+	{
+		std::vector<int> binary =	{ 1, 1, 1, 1, 1, 0, 0, 0, 0, 0 };
+		std::vector<int> first =	{ 1, 1, 1, 1, 1 };
+		std::vector<int> second =	{ 0, 0, 0, 0, 0 };
+
+		CHECK(Utility::SubVector(binary, 0, 5) == first);
+		CHECK(Utility::SubVector(binary, 5, 10) == second);
+	}
 }

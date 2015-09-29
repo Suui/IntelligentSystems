@@ -85,3 +85,9 @@ std::vector<int> Utility::IntegerToBinaryVector(int value)
 
 	return binaryVector;
 }
+
+
+std::vector<int> Utility::SubVector(std::vector<int> vector, int begin, int end)
+{
+	return std::vector<int>(vector.begin() + begin, vector.begin() + end);
+}

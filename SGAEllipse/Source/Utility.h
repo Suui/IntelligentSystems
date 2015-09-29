@@ -22,5 +22,5 @@ public:
 	
 	static std::vector<int> IntegerToBinaryVector(int value);
 
-	static std::vector<int> GetSubVector(std::vector<int> Vector, int begin, int end);
+	static std::vector<int> SubVector(std::vector<int> vector, int begin, int end);
 };
