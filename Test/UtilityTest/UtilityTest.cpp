@@ -12,8 +12,8 @@ TEST_CASE("Utility should")
 
 	SECTION("convert an integer to a human-readable ordered binary vector")
 	{
-		std::vector<int> result = { 1, 1, 0 };
-		CHECK(Utility::IntegerToBinaryVector(6) == result);
+		std::vector<int> binary = { 1, 1, 0 };
+		CHECK(Utility::IntegerToBinaryVector(6) == binary);
 	}
 
 	SECTION("create a human-readable ordered binary vector of the specified length in bits")
