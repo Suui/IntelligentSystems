@@ -45,7 +45,7 @@ void Population::SetToNextGeneration()
 	std::vector<Individual> eliteSons = Reproduction::Reproduce(GetIndividual(0), GetIndividual(1));
 	nextGeneration.insert(nextGeneration.end(), eliteSons.begin(), eliteSons.end());
 
-	// Crossover
+	// Two Point Crossover
 	std::vector<Individual> sons(2);
 	for (unsigned int i = 2, size = startingSize / 4 + 1; i < size; i += 1)
 	{
