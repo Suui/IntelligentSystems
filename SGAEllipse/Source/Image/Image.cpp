@@ -48,9 +48,17 @@ void Image::SetPixelAt(int x, int y, cv::Vec3b color)
 }
 
 
+void Image::DisplayConstant()
+{
+	cv::namedWindow("Binary Image", cv::WINDOW_KEEPRATIO); // Create a window for display.
+	cv::imshow("Binary Image", image); // Show our image inside it.
+	cv::waitKey(4);
+}
+
+
 void Image::Display()
 {
-	cv::namedWindow("Display window", cv::WINDOW_KEEPRATIO); // Create a window for display.
-	cv::imshow("Display window", image); // Show our image inside it.
+	cv::namedWindow("Results image", cv::WINDOW_KEEPRATIO); // Create a window for display.
+	cv::imshow("Results image", image); // Show our image inside it.
 	cv::waitKey(4);
 }

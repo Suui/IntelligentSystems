@@ -7,7 +7,9 @@ const int MAX_ITERATIONS = 40;
 
 int main()
 {
-	Image image = Image("img/ellipses.jpg", 128);
+	std::string imagePath = "img/ellipses.jpg";
+	Image image = Image(imagePath, 128);
+	image.DisplayConstant();
 
 	Population population = Population(50);
 
@@ -16,7 +18,7 @@ int main()
 		std::cout << "Generation " << i << " best fitness = " << population.GetIndividual(0).FitnessValue() << std::endl;
 		population.OrderByFitnessIn(image);
 
-		population.DisplayBestEllipseFoundIn(Image("img/ellipses.jpg"));
+		population.DisplayBestEllipseFoundIn(Image(imagePath));
 		population.SetToNextGeneration();
 	}
 

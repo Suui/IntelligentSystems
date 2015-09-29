@@ -25,4 +25,6 @@ public:
 	void SetPixelAt(int x, int y, cv::Vec3b color);
 
 	cv::Mat Get() { return image; }
+
+	void DisplayConstant();
 };
