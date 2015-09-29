@@ -1,8 +1,8 @@
 ﻿#pragma once
 #include "Individual.h"
-#include "../Image/Image.h"
 
 class FitnessFunction;
+class Image;
 
 
 class Population
@@ -12,8 +12,6 @@ class Population
 
 
 	FitnessFunction SetFitnessValueFor(Individual& individual);
-
-	FitnessFunction DisplayEllipseFor(Individual& individual);
 
 
 public:

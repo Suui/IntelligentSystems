@@ -1,8 +1,10 @@
 ﻿#include "Population.h"
-#include "../Fitness/FitnessFunction.h"
-#include "Reproduction.h"
 #include "PopulationStatics.h"
+#include "Reproduction.h"
+#include "../Fitness/FitnessFunction.h"
 #include "../Utility.h"
+#include "../Image/Image.h"
+#include <algorithm>
 
 
 Population::Population(int numberOfIndividuals, int bitsAB, int bitsXY, int bitsTheta)
@@ -19,12 +21,6 @@ Population::Population(int numberOfIndividuals, int bitsAB, int bitsXY, int bits
 
 
 FitnessFunction Population::SetFitnessValueFor(Individual& individual)
-{
-	return FitnessFunction(individual);
-}
-
-
-FitnessFunction Population::DisplayEllipseFor(Individual& individual)
 {
 	return FitnessFunction(individual);
 }

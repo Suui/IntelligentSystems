@@ -23,10 +23,13 @@
     <ClCompile Include="TestRunner\TestRunner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UtilityTest\UtilityTest.cpp">
+    <ClCompile Include="Population\IndividualTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Population\IndividualTest.cpp">
+    <ClCompile Include="Utility\UtilityTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Population\PopulationTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
