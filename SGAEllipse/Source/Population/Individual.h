@@ -47,4 +47,6 @@ public:
 	std::string ToBinaryString();
 
 	std::vector<Property> Properties() { return properties; }
+
+	std::vector<int> GetFullBinaryVector();
 };

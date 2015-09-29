@@ -34,6 +34,19 @@ Individual::Individual(std::vector<int> a, std::vector<int> b, std::vector<int> 
 }
 
 
+std::vector<int> Individual::GetFullBinaryVector()
+{
+	std::vector<int> fullBinaryIndividual(A().Binary().begin(), A().Binary().end());
+
+	fullBinaryIndividual.insert(fullBinaryIndividual.end(), B().Binary().begin(), B().Binary().end());
+	fullBinaryIndividual.insert(fullBinaryIndividual.end(), XCoord().Binary().begin(), XCoord().Binary().end());
+	fullBinaryIndividual.insert(fullBinaryIndividual.end(), YCoord().Binary().begin(), YCoord().Binary().end());
+	fullBinaryIndividual.insert(fullBinaryIndividual.end(), Theta().Binary().begin(), Theta().Binary().end());
+
+	return fullBinaryIndividual;
+}
+
+
 std::string Individual::ToDecimalString()
 {
 	std::ostringstream ostringstream;
