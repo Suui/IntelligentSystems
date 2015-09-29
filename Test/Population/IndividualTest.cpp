@@ -26,7 +26,8 @@ TEST_CASE("Individual should")
 			THEN("the Individual should return property A with a binary value of 5 bits")
 				CHECK(individual.A().Binary().size() == 5);
 
-
+			THEN("the Individual should return property B with a binary value of 5 bits")
+				CHECK(individual.B().Binary().size() == 5);
 		}
 	}
 }

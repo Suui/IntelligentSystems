@@ -19,7 +19,7 @@ public:
 
 	inline Property A();
 
-	Property B() { return properties[1]; }
+	inline Property B();
 
 	Property XCoord() { return properties[2]; }
 

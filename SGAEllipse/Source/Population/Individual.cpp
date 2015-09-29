@@ -38,6 +38,13 @@ inline Property Individual::A()
 }
 
 
+Property Individual::B()
+{
+	std::vector<int> binary = Utility::SubVector(binaryVector, PopulationStatics::bitsAB, PopulationStatics::bitsAB * 2);
+	return Property(Utility::BinaryVectorToDecimal(binary), binary);
+}
+
+
 std::string Individual::ToDecimalString()
 {
 	std::ostringstream ostringstream;
