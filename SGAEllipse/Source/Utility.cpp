@@ -82,7 +82,6 @@ std::vector<int> Utility::IntegerToBinaryVector(int value)
 	binaryVector.push_back(value);
 
 	reverse(binaryVector.begin(), binaryVector.end());
-
 	return binaryVector;
 }
 
