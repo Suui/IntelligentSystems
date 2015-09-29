@@ -87,6 +87,7 @@
   <ItemGroup>
     <ClCompile Include="Population\IndividualTest.cpp" />
     <ClCompile Include="Population\PopulationTest.cpp" />
+    <ClCompile Include="Population\ReproductionTest.cpp" />
     <ClCompile Include="TestRunner\TestRunner.cpp" />
     <ClCompile Include="Utility\UtilityTest.cpp" />
   </ItemGroup>

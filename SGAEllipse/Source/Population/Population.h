@@ -13,6 +13,8 @@ class Population
 
 	FitnessFunction SetFitnessValueFor(Individual& individual);
 
+	void Kill(int individualIndex);
+
 
 public:
 
@@ -23,7 +25,7 @@ public:
 	Individual& GetIndividual(int index) { return individuals[index]; }
 
 	void OrderByFitnessIn(Image image);
-	
+
 	void SetToNextGeneration();
 
 	void DisplayBestEllipseFoundIn(Image image);

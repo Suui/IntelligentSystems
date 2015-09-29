@@ -26,6 +26,12 @@ FitnessFunction Population::SetFitnessValueFor(Individual& individual)
 }
 
 
+void Population::Kill(int individualIndex)
+{
+	individuals.erase(individuals.begin() + individualIndex);
+}
+
+
 void Population::OrderByFitnessIn(Image image)
 {
 	for (Individual& individual : individuals)
@@ -39,21 +45,28 @@ void Population::OrderByFitnessIn(Image image)
 
 void Population::SetToNextGeneration()
 {
+	// Elitist
 	std::vector<Individual> nextGeneration(individuals.begin(), individuals.begin() + 2);
 
-	// Elitist
-	std::vector<Individual> eliteSons = Reproduction::Reproduce(GetIndividual(0), GetIndividual(1));
-	nextGeneration.insert(nextGeneration.end(), eliteSons.begin(), eliteSons.end());
+	// Mutation
+	nextGeneration.push_back(Individual());
+	nextGeneration.push_back(Individual());
 
 	// Two Point Crossover
 	std::vector<Individual> sons(2);
-	for (unsigned int i = 2, size = startingSize / 4 + 1; i < size; i += 1)
-	{
-		sons = Reproduction::Reproduce(GetIndividual(0), GetIndividual(i));
+	int chosenOnesLeft = startingSize / 2 - 1;
+
+	while (chosenOnesLeft > 1) {
+		int chosenFather = Utility::IntegerBetween(0, chosenOnesLeft);
+		int chosenMother = Utility::IntegerBetween(0, chosenOnesLeft);
+
+		sons = Reproduction::Reproduce(GetIndividual(chosenFather), GetIndividual(chosenMother));
 		nextGeneration.insert(nextGeneration.end(), sons.begin(), sons.end());
 
-		sons = Reproduction::Reproduce(GetIndividual(1), GetIndividual(i));
-		nextGeneration.insert(nextGeneration.end(), sons.begin(), sons.end());
+		Kill(chosenFather);
+		chosenOnesLeft -= 1;
+
+		individuals.shrink_to_fit();
 	}
 
 	individuals = nextGeneration;

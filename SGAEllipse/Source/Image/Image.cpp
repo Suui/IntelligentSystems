@@ -52,5 +52,5 @@ void Image::Display()
 {
 	cv::namedWindow("Display window", cv::WINDOW_KEEPRATIO); // Create a window for display.
 	cv::imshow("Display window", image); // Show our image inside it.
-	cv::waitKey(0);
+	cv::waitKey(4);
 }

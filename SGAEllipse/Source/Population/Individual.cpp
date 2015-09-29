@@ -15,12 +15,8 @@ Individual::Individual()
 
 Individual::Individual(std::vector<int> fullBinaryVector)
 {
-	binaryVector = fullBinaryVector;
-
-	int bitsAB = PopulationStatics::bitsAB;
-	int bitsXY = PopulationStatics::bitsXY;
-	int bitsTheta = PopulationStatics::bitsTheta;
-	
+	fitnessValue = 0;
+	binaryVector = fullBinaryVector;	
 }
 
 

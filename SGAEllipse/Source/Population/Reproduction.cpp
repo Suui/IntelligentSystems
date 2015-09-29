@@ -21,10 +21,10 @@ std::vector<Individual> Reproduction::Reproduce(Individual father, Individual mo
 	int firstCrossOverPoint, secondCrossOverPoint;
 
 	firstCrossOverPoint = Utility::IntegerBetween(0, fatherBinary.size());
-	secondCrossOverPoint = Utility::IntegerBetween(0, fatherBinary.size());
+	secondCrossOverPoint = Utility::IntegerBetween(firstCrossOverPoint, fatherBinary.size());
 
 	std::vector<int> firstSon = CrossoverBetween(fatherBinary, motherBinary, firstCrossOverPoint, secondCrossOverPoint);
-	std::vector<int> secondSon = (CrossoverBetween(motherBinary, motherBinary, firstCrossOverPoint, secondCrossOverPoint));
+	std::vector<int> secondSon = CrossoverBetween(motherBinary, motherBinary, firstCrossOverPoint, secondCrossOverPoint);
 
 	std::vector<Individual> descendance;
 	descendance.push_back(Individual(firstSon));
