@@ -54,7 +54,7 @@ inline Property Individual::XCoord()
 }
 
 
-Property Individual::YCoord()
+inline Property Individual::YCoord()
 {
 	int begin = PopulationStatics::bitsAB * 2 + PopulationStatics::bitsXY;
 	std::vector<int> binary = Utility::SubVector(binaryVector, begin, begin + PopulationStatics::bitsXY);
@@ -62,7 +62,7 @@ Property Individual::YCoord()
 }
 
 
-Property Individual::Theta()
+inline Property Individual::Theta()
 {
 	int begin = PopulationStatics::bitsAB * 2 + PopulationStatics::bitsXY * 2;
 	std::vector<int> binary = Utility::SubVector(binaryVector, begin, begin + PopulationStatics::bitsTheta);
