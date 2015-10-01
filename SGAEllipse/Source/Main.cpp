@@ -2,7 +2,7 @@
 #include "Image/Image.h"
 #include <iostream>
 
-const int MAX_ITERATIONS = 40;
+const int MAX_ITERATIONS = 100;
 
 
 int main()
@@ -15,8 +15,8 @@ int main()
 
 	for (int i = 0; i < MAX_ITERATIONS; i++)
 	{
-		std::cout << "Generation " << i << " best fitness = " << population.GetIndividual(0).FitnessValue() << std::endl;
 		population.OrderByFitnessIn(image);
+		std::cout << "Generation " << i << " best fitness = " << population.GetIndividual(0).FitnessValue() << std::endl;
 
 		population.DisplayBestEllipseFoundIn(Image(imagePath));
 		population.SetToNextGeneration();
