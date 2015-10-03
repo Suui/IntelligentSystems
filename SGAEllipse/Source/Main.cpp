@@ -2,7 +2,7 @@
 #include "Image/Image.h"
 #include <iostream>
 
-const int MAX_ITERATIONS = 100;
+const int MAX_ITERATIONS = 60;
 
 
 int main()
@@ -11,7 +11,7 @@ int main()
 	Image image = Image(imagePath, 128);
 	image.DisplayConstant();
 
-	Population population = Population(50);
+	Population population = Population(100);
 
 	for (int i = 0; i < MAX_ITERATIONS; i++)
 	{

@@ -59,7 +59,7 @@ std::vector<std::pair<int, int>> Utility::GetEllipsePointsFor(Individual individ
 	int x, y;
 	std::vector<std::pair<int, int>> elipsePoints;
 
-	for (double alpha = 0.2; alpha < 180; alpha += 0.02)
+	for (double alpha = 0.1; alpha < 180; alpha += 0.1)
 	{
 		x = static_cast<int>((a*cos(alpha) + x0)*cos(theta) + (b*sin(alpha) + y0)*sin(theta));
 		y = static_cast<int>((a*cos(alpha) + x0)*sin(theta) + (b*sin(alpha) + y0)*cos(theta));
