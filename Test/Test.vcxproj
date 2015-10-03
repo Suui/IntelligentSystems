@@ -60,7 +60,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>D:\Projects\Programming\Cpp\IntelligentSystems\SGAEllipse\Debug\Utility.obj;D:\Projects\Programming\Cpp\IntelligentSystems\SGAEllipse\Debug\Individual.obj;D:\Projects\Programming\Cpp\IntelligentSystems\SGAEllipse\Debug\PopulationStatics.obj;D:\Projects\Programming\Cpp\IntelligentSystems\SGAEllipse\Debug\Property.obj;D:\Projects\Programming\Cpp\IntelligentSystems\SGAEllipse\Debug\Population.obj;D:\Projects\Programming\Cpp\IntelligentSystems\SGAEllipse\Debug\Image.obj;D:\Projects\Programming\Cpp\IntelligentSystems\SGAEllipse\Debug\FitnessFunction.obj;D:\Projects\Programming\Cpp\IntelligentSystems\SGAEllipse\Debug\Reproduction.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)\SGAEllipse\Debug\Utility.obj;$(SolutionDir)\SGAEllipse\Debug\Individual.obj;$(SolutionDir)\SGAEllipse\Debug\PopulationStatics.obj;$(SolutionDir)\SGAEllipse\Debug\Property.obj;$(SolutionDir)\SGAEllipse\Debug\Population.obj;$(SolutionDir)\SGAEllipse\Debug\Image.obj;$(SolutionDir)\SGAEllipse\Debug\FitnessFunction.obj;$(SolutionDir)\SGAEllipse\Debug\Reproduction.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

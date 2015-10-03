@@ -83,6 +83,7 @@
   <ItemGroup>
     <ClCompile Include="Source\Image\Image.cpp" />
     <ClCompile Include="Source\Fitness\FitnessFunction.cpp" />
+    <ClCompile Include="Source\Plot\cvplot.cpp" />
     <ClCompile Include="Source\Population\Individual.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Population\Population.cpp" />
@@ -94,6 +95,7 @@
   <ItemGroup>
     <ClInclude Include="Source\Image\Image.h" />
     <ClInclude Include="Source\Fitness\FitnessFunction.h" />
+    <ClInclude Include="Source\Plot\cvplot.h" />
     <ClInclude Include="Source\Population\Individual.h" />
     <ClInclude Include="Source\Population\Population.h" />
     <ClInclude Include="Source\Population\PopulationStatics.h" />
