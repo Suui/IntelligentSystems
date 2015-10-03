@@ -42,9 +42,6 @@
     <ClCompile Include="Source\Population\PopulationStatics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Plot\cvplot.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Image\Image.h">
@@ -69,9 +66,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Source\Population\PopulationStatics.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Plot\cvplot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

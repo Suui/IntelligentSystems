@@ -83,9 +83,9 @@ void Population::DisplayBestEllipseFoundIn(Image image)
 		x = ellipsePoints[i].first;
 		y = ellipsePoints[i].second;
 		if (x >= 0 && x <= 99 && y >= 0 && y <= 99)
-			image.SetPixelAt(x, y, Image::blueColor);
+			image.SetPixelAt(x, y, Image::redColor);
 		
 	}
 
-	image.Display();
+	image.Display(4);
 }

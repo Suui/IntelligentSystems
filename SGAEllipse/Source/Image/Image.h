@@ -11,20 +11,18 @@ class Image
 
 public:
 
-	static const cv::Vec3b blueColor;
+	static const cv::Vec3b redColor, greenColor, blueColor;
 
 
 	explicit Image(std::string imagePath);
 
 	explicit Image(std::string imagePath, int threshold);
 
-	void Display();
+	void Display(int waitKeyTime);
 
 	int GetPixelAt(int x, int y);
 
 	void SetPixelAt(int x, int y, cv::Vec3b color);
 
 	cv::Mat Get() { return image; }
-
-	void DisplayConstant();
 };

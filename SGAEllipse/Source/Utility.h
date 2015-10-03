@@ -23,4 +23,6 @@ public:
 	static std::vector<int> IntegerToBinaryVector(int value);
 
 	static std::vector<int> SubVector(std::vector<int> vector, int begin, int end);
+	
+	static void PlotResults(std::vector<int> results, int numberOfResults);
 };
