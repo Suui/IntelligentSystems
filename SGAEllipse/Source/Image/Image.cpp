@@ -6,7 +6,9 @@
 #include <string>
 
 
-cv::Vec3b const Image::blueColor = cv::Vec3b(0, 0, 255);
+cv::Vec3b const Image::redColor = cv::Vec3b(0, 0, 255);
+cv::Vec3b const Image::greenColor = cv::Vec3b(0, 255, 0);
+cv::Vec3b const Image::blueColor = cv::Vec3b(155, 0, 0);
 
 
 Image::Image(std::string imagePath)
@@ -48,17 +50,9 @@ void Image::SetPixelAt(int x, int y, cv::Vec3b color)
 }
 
 
-void Image::DisplayConstant()
-{
-	cv::namedWindow("Binary Image", cv::WINDOW_KEEPRATIO); // Create a window for display.
-	cv::imshow("Binary Image", image); // Show our image inside it.
-	cv::waitKey(4);
-}
-
-
-void Image::Display()
+void Image::Display(int waitKeyTime)
 {
 	cv::namedWindow("Results image", cv::WINDOW_KEEPRATIO); // Create a window for display.
 	cv::imshow("Results image", image); // Show our image inside it.
-	cv::waitKey(4);
+	cv::waitKey(waitKeyTime);
 }

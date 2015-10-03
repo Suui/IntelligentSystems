@@ -1,6 +1,8 @@
 ﻿#include "Utility.h"
-#include <ctime>
 #include "Population/Individual.h"
+#include "Image/Image.h"
+#include <ctime>
+
 
 #define _USE_MATH_DEFINES
 #include <math.h>
@@ -89,4 +91,27 @@ std::vector<int> Utility::IntegerToBinaryVector(int value)
 std::vector<int> Utility::SubVector(std::vector<int> vector, int begin, int end)
 {
 	return std::vector<int>(vector.begin() + begin, vector.begin() + end);
+}
+
+
+void Utility::PlotResults(std::vector<int> results, int numberOfResults)
+{
+	Image image = Image("img/blankPlot.jpg");
+	int maxFitness = 3080;
+
+	for (int i = 0; i < 100; i++)
+	{
+		image.SetPixelAt(i, 0, Image::greenColor);
+		image.SetPixelAt(i, 99, Image::redColor);
+	}
+
+	int position = 0;
+	for (auto result : results)
+	{
+		int scaled = 99 - result * 99 / maxFitness;
+		image.SetPixelAt(position, scaled, Image::blueColor);
+		position += 99 / numberOfResults;
+	}
+
+	image.Display(0);
 }

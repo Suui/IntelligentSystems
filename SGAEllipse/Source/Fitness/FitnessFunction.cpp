@@ -22,8 +22,8 @@ void FitnessFunction::In(Image image)
 		}
 	}
 
-	fitnessPoints += individual.A().Decimal() * 25;
-	fitnessPoints += individual.B().Decimal() * 25;
+	fitnessPoints += individual.A().Decimal() * 20;
+	fitnessPoints += individual.B().Decimal() * 20;
 
 	individual.SetFitnessValue(fitnessPoints);
 }
